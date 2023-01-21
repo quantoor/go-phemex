@@ -55,6 +55,7 @@ const (
 	TimeInForceTypeGTC TimeInForceType = "GoodTillCancel"
 	TimeInForceTypeIOC TimeInForceType = "ImmediateOrCancel"
 	TimeInForceTypeFOK TimeInForceType = "FillOrKill"
+	TimeInForceTypePO  TimeInForceType = "PostOnly"
 
 	TriggerTypeByMarkPrice TriggerType = "ByMarkPrice"
 	TriggerTypeByLastPrice TriggerType = "ByLastPrice"
