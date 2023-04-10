@@ -74,13 +74,13 @@ type ExchangeProduct struct {
 	Status                   string  `json:"status"`
 	TipOrderQty              int64   `json:"tipOrderQty"`
 	Description              string  `json:"description"`
-	//PerpetualV2
-	//QtyPrecision    int     `json:"qtyPrecision"`
-	//QtyStepSize     float64 `json:"qtyStepSize"`
-	//MinPriceRp      float64 `json:"minPriceRp"`
-	//MaxPriceRp      float64 `json:"maxPriceRp"`
-	//MinOrderValueRv float64 `json:"minOrderValueRv"`
-	//MaxOrderQtyRq   float64 `json:"maxOrderQtyRq"`
-	//BaseCurrency    string  `json:"baseCurrency"`
-	//TipOrderQtyRq   float64 `json:"tipOrderQtyRq"`
+	// PerpetualV2
+	QtyPrecision    int     `json:"qtyPrecision"`
+	QtyStepSize     float64 `json:"qtyStepSize"`
+	MinPriceRp      float64 `json:"minPriceRp"`
+	MaxPriceRp      float64 `json:"maxPriceRp"`
+	MinOrderValueRv float64 `json:"minOrderValueRv"`
+	MaxOrderQtyRq   float64 `json:"maxOrderQtyRq"`
+	BaseCurrency    string  `json:"baseCurrency"`
+	TipOrderQtyRq   float64 `json:"tipOrderQtyRq"`
 }

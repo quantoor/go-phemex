@@ -24,6 +24,9 @@ type ExchangeMarginType int
 // SideType define side type of order
 type SideType string
 
+// PosSideType define pos side type of hedged order
+type PosSideType string
+
 // OrderType define order type
 type OrderType string
 
@@ -42,6 +45,9 @@ const (
 
 	SideTypeBuy  SideType = "Buy"
 	SideTypeSell SideType = "Sell"
+
+	PosSideTypeLong  PosSideType = "Long"
+	PosSideTypeShort PosSideType = "Short"
 
 	OrderTypeLimit           OrderType = "Limit"
 	OrderTypeMarket          OrderType = "Market"
@@ -257,6 +263,26 @@ func (c *Client) NewCancelOrderService() *CancelOrderService {
 // NewQueryOrderService init query order service
 func (c *Client) NewQueryOrderService() *QueryOrderService {
 	return &QueryOrderService{c: c}
+}
+
+// NewCreateOrderHedgedService init create order service hedged
+func (c *Client) NewCreateOrderHedgedService() *CreateOrderHedgedService {
+	return &CreateOrderHedgedService{c: c}
+}
+
+// NewCreateReplaceOrderHedgedService init replace order service hedged
+func (c *Client) NewCreateReplaceOrderHedgedService() *CreateReplaceOrderHedgedService {
+	return &CreateReplaceOrderHedgedService{c: c}
+}
+
+// NewCancelOrderHedgedService init cancel order service hedged
+func (c *Client) NewCancelOrderHedgedService() *CancelOrderHedgedService {
+	return &CancelOrderHedgedService{c: c}
+}
+
+// NewQueryOrderHedgedService init query order service hedged
+func (c *Client) NewQueryOrderHedgedService() *QueryOrderHedgedService {
+	return &QueryOrderHedgedService{c: c}
 }
 
 // NewPositionsLeverageService init positions leverage service
